@@ -36,6 +36,9 @@ activate :autoprefixer
 ###
 
 # Automatic image dimensions on image_tag helper
+["anne", "seb", "romain"].each do |name|
+  proxy "/flats/#{name}.html", "/flats/show.html", :locals => { :owner => name }, :ignore => true
+end
 # activate :automatic_image_sizes
 
 # Reload the browser automatically whenever files change
